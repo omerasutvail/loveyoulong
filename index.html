@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parallax Star Background</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .music-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .song-image {
+            width: 40px; /* Thay đổi kích thước hình ảnh theo mong muốn */
+            border-radius: 5px;
+        }
+
+        .controls {
+            display: flex;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 0 10px;
+            color: #fff;
+        }
+
+        button:hover {
+            color: #ff6600;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 10px;
+            background: #555;
+            position: relative;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        .progress {
+            height: 100%;
+            background: #ff6600;
+            border-radius: 5px;
+        }
+
+        .time-control {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            color: #fff;
+        }
+        .text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: 600px;
+            background: #333;
+        }
+
+        .text {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="text-container">
+    <div class="text" id="text1">Khi tình yêu bắt đầu sẽ có chút hiều nhầm. Không phải không hợp mà là do chưa thấu hiểu nhau nhiều.</div>
+    <div class="text" id="text2">Nhưng......</div>
+    <div class="text" id="text3"><img style="width: 600px;height: 400px;" src="hd5.jpg" alt="image"></div>
+    <div class="text" id="text4">Thời gian sẽ là công cụ giúp ta kết nội với nhau mạnh mẽ hơn.</div>
+    <div class="text" id="text5"><img style="width: 600px;height: 400px;" src="hd5.jpg" alt="image"></div>
+    <div class="text" id="text6">Và chúng ta sẽ cùng nhau đi hết cuộc đời này.</div>
+    <div class="text" id="text7"><img style="width: 600px;height: 400px;" src="hd2.jpg" alt="image"></div>
+    <div class="text" id="text8">Vì tình yêu của chúng ta là mãi mãi.</div>
+    <div class="text" id="text9"><img style="width: 600px;height: 400px;" src="hd3.jpg" alt="image"></div>
+    <div class="text" id="text10">Hãy đến cạnh bên anh.</div>
+    <div class="text" id="text11"><img style="width: 600px;height: 400px;" src="hd4.jpg" alt="image"></div>
+    <div class="text" id="text12">Anh yêu em.</div>
+    <div class="text" id="text13"><img style="width: 600px;height: 400px;" src="em.jpg" alt="image"></div>
+    <div class="text" id="text14">Nguyễn Văn Long❤️❤️❤️.</div>
+</div>
+    <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div class="music-player">
+            <img src="hd.jpg" alt="Song Image" class="song-image">
+            <div class="controls">
+                <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+                <button id="repeatBtn"><i class="fas fa-redo"></i></button>
+                <button id="playOnceBtn"><i class="fas fa-play-circle"></i></button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-control">
+                <span class="current-time" id="currentTime">0:00</span>
+                <span class="total-time" id="totalTime">0:00</span>
+            </div>
+            <audio id="audioPlayer" src="nanglunglinh.mp3"></audio>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
